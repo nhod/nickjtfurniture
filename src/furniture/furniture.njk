@@ -9,14 +9,14 @@ permalink: "/furniture/{{ item.name | slugify }}/"
 
 <div class="container">
     <div class="detail-container">
-        <a href="/" class="back-link">← Back to all furniture</a>
+        <a href="{{ '/' | url }}" class="back-link">← Back to all furniture</a>
         
         <div class="detail-grid">
             <div class="detail-images">
                 {% set imageList = item.images | splitImages %}
                 {% for image in imageList %}
                     <div class="detail-image">
-                        <img src="/images/{{ image }}" alt="{{ item.name }}" loading="lazy">
+                        <img src="{{ ('/images/' + image) | url }}" alt="{{ item.name }}" loading="lazy">
                     </div>
                 {% endfor %}
             </div>

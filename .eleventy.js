@@ -93,6 +93,7 @@ module.exports = function(eleventyConfig) {
       data: "../_data"
     },
     templateFormats: ["njk", "md", "html"],
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    pathPrefix: "/nickjtfurniture/"
   };
 };

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or "Nick and JT Furniture For Sale" }}</title>
     <meta name="description" content="{{ description or "Quality furniture for sale. Moving sale with carefully curated pieces." }}">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
     <header class="header">
@@ -14,7 +14,7 @@
                 {% if page.url == "/" %}
                     Nick and JT Furniture For Sale
                 {% else %}
-                    <a href="/">Nick and JT Furniture For Sale</a>
+                    <a href="{{ '/' | url }}">Nick and JT Furniture For Sale</a>
                 {% endif %}
             </h1>
         </div>
