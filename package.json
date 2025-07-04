@@ -1,0 +1,29 @@
+{
+  "name": "nickjtfurniture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --port=4242",
+    "start": "eleventy --serve --watch --port=4242",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhod/nickjtfurniture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nhod/nickjtfurniture/issues"
+  },
+  "homepage": "https://github.com/nhod/nickjtfurniture#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "csv-parse": "^5.6.0"
+  }
+}

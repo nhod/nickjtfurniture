@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: "Nick and JT Furniture For Sale"
+description: "Quality furniture for sale. Moving sale with carefully curated pieces."
+---
+
+<div class="container">
+    <div class="furniture-grid">
+        {% for item in furniture %}
+            <a href="/furniture/{{ item.name | slugify }}/" class="furniture-card{% if item | sold %} sold{% endif %}">
+                <div class="furniture-image">
+                    {% set firstImg = item.images | firstImage %}
+                    {% if firstImg %}
+                        <img src="/images/{{ firstImg }}" alt="{{ item.name }}" loading="lazy">
+                    {% else %}
+                        <div style="background: #f0f0f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #666;">No Image</div>
+                    {% endif %}
+                </div>
+                <div class="furniture-info">
+                    <h3>{{ item.name }}</h3>
+                    <div class="furniture-price">{{ item.price }}</div>
+                    <div class="furniture-description">{{ item.description }}</div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>

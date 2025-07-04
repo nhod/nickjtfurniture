@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "Nick and JT Furniture For Sale" }}</title>
+    <meta name="description" content="{{ description or "Quality furniture for sale. Moving sale with carefully curated pieces." }}">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>
+                {% if page.url == "/" %}
+                    Nick and JT Furniture For Sale
+                {% else %}
+                    <a href="/">Nick and JT Furniture For Sale</a>
+                {% endif %}
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>For inquiries about any piece, please contact <a href="mailto:jt@nickandjt.com">jt@nickandjt.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

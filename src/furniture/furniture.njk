@@ -1,0 +1,50 @@
+---
+layout: base.njk
+pagination:
+  data: furniture
+  size: 1
+  alias: item
+permalink: "/furniture/{{ item.name | slugify }}/"
+---
+
+<div class="container">
+    <div class="detail-container">
+        <a href="/" class="back-link">← Back to all furniture</a>
+        
+        <div class="detail-grid">
+            <div class="detail-images">
+                {% set imageList = item.images | splitImages %}
+                {% for image in imageList %}
+                    <div class="detail-image">
+                        <img src="/images/{{ image }}" alt="{{ item.name }}" loading="lazy">
+                    </div>
+                {% endfor %}
+            </div>
+            
+            <div class="detail-info">
+                <h1>
+                    {{ item.name }}
+                    {% if item | sold %}
+                        <span style="color: var(--color-gray-500); font-weight: 400;"> - SOLD</span>
+                    {% endif %}
+                </h1>
+                
+                <div class="detail-price">{{ item.price }}</div>
+                
+                <div class="detail-description">
+                    {{ item.description }}
+                </div>
+                
+                {% if not (item | sold) %}
+                    <a href="mailto:jt@nickandjt.com?subject=Interested in {{ item.name }}&body=Hi, I'm interested in the {{ item.name }} listed for {{ item.price }}. Is it still available?" class="contact-button">
+                        Contact About This Piece
+                    </a>
+                {% else %}
+                    <div style="color: var(--color-gray-500); font-style: italic;">
+                        This item has been sold.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
