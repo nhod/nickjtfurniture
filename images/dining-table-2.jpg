@@ -1,8 +1,0 @@
-This is a placeholder file. Replace with actual furniture images matching the CSV filenames:
-- dining-table-1.jpg, dining-table-2.jpg
-- eames-chair-1.jpg, eames-chair-2.jpg, eames-chair-3.jpg  
-- velvet-sofa-1.jpg, velvet-sofa-2.jpg
-- teak-sideboard-1.jpg
-- bookshelf-1.jpg, bookshelf-2.jpg
-
-Images should be high-resolution JPGs (ideally 1200px+ on longest side) for best results with 11ty image processing.
